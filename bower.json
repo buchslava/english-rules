@@ -1,0 +1,26 @@
+{
+  "name": "english-rules",
+  "version": "0.0.0",
+  "homepage": "https://github.com/buchslava/english-rules",
+  "authors": [
+    "Slava Chub"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "underscore": "~1.6.0",
+    "angular": "~1.2.21",
+    "angular-route": "~1.2.21",
+    "angular-resource": "~1.2.21",
+    "angular-cookies": "~1.2.21",
+    "angular-bootstrap": "~0.11.0",
+    "bootstrap": ">=2"
+  }
+}
