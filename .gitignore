@@ -1,0 +1,8 @@
+.idea
+/.project
+/**/.DS_Store
+robots.txt
+npm-debug.log
+/node_modules
+/bower_components
+/lib
