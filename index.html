@@ -7,53 +7,23 @@
     <title>English</title>
     <link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="lib/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />
-    <script src="lib/jquery/dist/js/jquery.min.js"></script>
+    <script src="lib/underscore/underscore.js"></script>
+    <script src="lib/jquery/dist/jquery.min.js"></script>
     <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/angular-bootstrap/ui-bootstrap.min.js"></script>
     <script src="app.js"></script>
   </head>
   <body>
-
-    {{ gc.foo }}
 
 <div class="container">
 
 <h2>Parts of speech</h2>
 <div class="table-responsive">
 <table class="table table-bordered text-center">
-  <tr>
-    <td>noun</td>
-    <td>существительное</td>
-    <td>кто/что</td>
-  </tr>
-  <tr>
-    <td>pronoun</td>
-    <td>местоимение</td>
-    <td>кто/что</td>
-  </tr>
-  <tr>
-    <td>verb</td>
-    <td>глагол</td>
-    <td>что делать</td>
-  </tr>
-  <tr>
-    <td>adverb</td>
-    <td>наречие</td>
-    <td>как где куда зачем почему</td>
-  </tr>
-  <tr>
-    <td>article</td>
-    <td>артикль</td>
-    <td>a the</td>
-  </tr>
-  <tr>
-    <td>preposition</td>
-    <td>предлог</td>
-    <td>on to in</td>
-  </tr>
-  <tr>
-    <td>numerals</td>
-    <td>числительные</td>
-    <td>порядковые количественные</td>
+  <tr ng-repeat="(posKey, posValue) in gc.terms.partsOfSpeech">
+    <td>{{posKey}}</td>
+    <td>{{posValue.ru}}</td>
+    <td>{{posValue.desc}}</td>
   </tr>
 </table>
 </div>
@@ -67,42 +37,42 @@
 <div class="table-responsive">
 <table class="table table-bordered text-center">
   <tr>
-    <th class="text-center"><mark>singular</mark></td>
-    <th class="text-center"><mark>plural</mark></td>
+    <th class="text-center">singular</td>
+    <th class="text-center">plural</td>
   </tr>
   <tr>
-    <td>I</td>
-    <td>We</td>
+    <td>{{gc.rule.subjectPronouns.first().singular().name}}</td>
+    <td>{{gc.rule.subjectPronouns.second().singular().name}}</td>
   </tr>
   <tr>
-    <td colspan="2">you</td>
+    <td colspan="2">{{gc.rule.subjectPronouns.second().name}}</td>
   </tr>
   <tr>
     <td>
-      he<br>she<br>it
+      {{gc.rule.subjectPronouns.third().singular().male().name}}<br>
+      {{gc.rule.subjectPronouns.third().singular().female().name}}<br>
+      {{gc.rule.subjectPronouns.third().singular().inanimate().name}}
     </td>
     <td>
-      they
+      {{gc.rule.subjectPronouns.third().plural().name}}
     </td>
   </tr>
 
 </table>
 </div>
 
+<h3>to be</h3>
 <div class="table-responsive">
 <table class="table table-bordered text-center">
-  <tr>
-    <th colspan="3" class="text-center"><mark>to be</mark></td>
-  </tr>
   <tr>
     <td>am</td>
     <td>is</td>
     <td>are</td>
   </tr>
   <tr>
-    <td>(I)</td>
-    <td>(he she it)</td>
-    <td>(you we they)</td>
+    <td>{{gc.arrSliceToStr(gc.rule.tobe.am(), 'name')}}</td>
+    <td>{{gc.arrSliceToStr(gc.rule.tobe.is(), 'name')}}</td>
+    <td>{{gc.arrSliceToStr(gc.rule.tobe.are(), 'name')}}</td>
   </tr>
 </table>
 </div>
@@ -115,6 +85,11 @@
       <blockquote>
         <abbr title="Subject">S</abbr> + (am, is, are) + ...
       </blockquote>
+      <div class="btn-group">
+        <label class="btn btn-primary" ng-model="gc.toBeEx.positive" btn-radio="'i'">I</label>
+        <label class="btn btn-primary" ng-model="gc.toBeEx.positive" btn-radio="'you'">you</label>
+        <label class="btn btn-success">{{gc.rule.tobe[gc.toBeEx.positive]().name}}</label>
+      </div>
     </td>
   </tr>
   <tr>
