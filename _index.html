@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html ng-app="eng.main" ng-controller="GeneralCtrl as gc">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>English</title>
+    <link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="lib/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <script src="lib/underscore/underscore.js"></script>
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/angular-bootstrap/ui-bootstrap.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body>
+
+<div class="container">
+
+<h2>Parts of speech</h2>
+<div class="table-responsive">
+<table class="table table-bordered text-center">
+  <tr ng-repeat="(posKey, posValue) in gc.terms.partsOfSpeech">
+    <td>{{posKey}}</td>
+    <td>{{posValue.ru}}</td>
+    <td>{{posValue.desc}}</td>
+  </tr>
+</table>
+</div>
+
+<blockquote>
+  <abbr title="Nouns or pronouns">Subject</abbr> + <abbr title="Verb">Verb</abbr> + ...
+</blockquote>
+
+<h2>Subject pronouns</h2>
+
+<div class="table-responsive">
+<table class="table table-bordered text-center">
+  <tr>
+    <th class="text-center">singular</td>
+    <th class="text-center">plural</td>
+  </tr>
+  <tr>
+    <td>{{gc.rule.subjectPronouns.first().singular().name}}</td>
+    <td>{{gc.rule.subjectPronouns.second().singular().name}}</td>
+  </tr>
+  <tr>
+    <td colspan="2">{{gc.rule.subjectPronouns.second().name}}</td>
+  </tr>
+  <tr>
+    <td>
+      {{gc.rule.subjectPronouns.third().singular().male().name}}<br>
+      {{gc.rule.subjectPronouns.third().singular().female().name}}<br>
+      {{gc.rule.subjectPronouns.third().singular().inanimate().name}}
+    </td>
+    <td>
+      {{gc.rule.subjectPronouns.third().plural().name}}
+    </td>
+  </tr>
+
+</table>
+</div>
+
+<h3>to be</h3>
+<div class="table-responsive">
+<table class="table table-bordered text-center">
+  <tr>
+    <td>am</td>
+    <td>is</td>
+    <td>are</td>
+  </tr>
+  <tr>
+    <td>{{gc.arrSliceToStr(gc.rule.tobe.am(), 'name')}}</td>
+    <td>{{gc.arrSliceToStr(gc.rule.tobe.is(), 'name')}}</td>
+    <td>{{gc.arrSliceToStr(gc.rule.tobe.are(), 'name')}}</td>
+  </tr>
+</table>
+</div>
+
+<div class="table-responsive">
+<table class="table table-bordered">
+  <tr>
+    <td>positive</td>
+    <td>
+      <blockquote>
+        <abbr title="Subject">S</abbr> + (am, is, are) + ...
+      </blockquote>
+      <div class="btn-group">
+        <label class="btn btn-primary" ng-model="gc.toBeEx.positive" btn-radio="'i'">I</label>
+        <label class="btn btn-primary" ng-model="gc.toBeEx.positive" btn-radio="'you'">you</label>
+        <label class="btn btn-success">{{gc.rule.tobe[gc.toBeEx.positive]().name}}</label>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>negative</td>
+    <td>
+      <blockquote>
+        <abbr title="Subject">S</abbr> + (am, is, are) + not + ...
+      </blockquote>
+    </td>
+  </tr>
+  <tr>
+    <td>question</td>
+    <td>
+      <blockquote>
+        <abbr title="Pronoun">P</abbr> + (am, is, are) + <abbr title="Subject">S</abbr> + ... ?
+      </blockquote>
+    </td>
+  </tr>
+</table>
+
+<!--Posessive Adjectives
+
+My Our
+  Your
+His
+Her
+Its     Their-->
+
+
+
+
+<!--<div class="row">
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+</div>
+<div class="row">
+  <div class="col-md-8">.col-md-8</div>
+  <div class="col-md-4">.col-md-4</div>
+</div>
+<div class="row">
+  <div class="col-md-4">.col-md-4</div>
+  <div class="col-md-4">.col-md-4</div>
+  <div class="col-md-4">.col-md-4</div>
+</div>
+<div class="row">
+  <div class="col-md-6">.col-md-6</div>
+  <div class="col-md-6">.col-md-6 <var>y</var> = <var>m</var><var>x</var> + <var>b</var></div>
+</div>-->
+
+
+</div>
+  </body>
+</html>
