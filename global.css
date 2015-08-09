@@ -1,0 +1,63 @@
+.radioButtondemoBasicUsage body {
+    padding: 20px;
+}
+
+.radioButtondemoBasicUsage hr {
+    margin-left: -20px;
+    opacity: 0.3;
+}
+
+.radioButtondemoBasicUsage md-radio-group {
+    width: 150px;
+}
+
+.radioButtondemoBasicUsage p:last-child {
+    padding-bottom: 50px;
+}
+
+.radioButtondemoBasicUsage [ng-controller] {
+    padding-left: 20px;
+}
+
+.radioButtondemoBasicUsage .radioValue {
+    margin-left: 5px;
+    color: #0f9d58;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.radioButtondemoBasicUsage md-icon {
+    margin: 20px;
+    margin-top: 0;
+    width: 128px;
+    height: 128px;
+}
+
+.tabsdemoStaticTabs md-tab-content {
+    padding: 25px;
+}
+
+.tabsdemoStaticTabs md-tab-content:nth-child(1) {
+    background-color: #42A5F5;
+}
+
+.tabsdemoStaticTabs md-tab-content:nth-child(2) {
+    background-color: #689F38;
+}
+
+.tabsdemoStaticTabs md-tab-content:nth-child(3) {
+    background-color: #26C6DA;
+}
+
+.tabsdemoStaticTabs .after-tabs-area > span {
+    margin-top: 25px;
+    padding-right: 15px;
+    vertical-align: middle;
+    line-height: 30px;
+    height: 35px;
+}
+
+.tabsdemoStaticTabs .after-tabs-area > md-checkbox {
+    margin-top: 26px;
+    margin-left: 0;
+}
