@@ -115,7 +115,6 @@ angular.module('eng.main')
         answers: [
           {name: 'Where am I?', right: true},
           {name: 'When am I?'},
-          {name: 'Where am I?'},
           {name: 'When I am?'},
           {name: 'Where I am?'}
         ]

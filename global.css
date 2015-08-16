@@ -61,3 +61,15 @@
     margin-top: 26px;
     margin-left: 0;
 }
+
+.ok {
+    color: green;
+}
+
+.okResult {
+    color: blue;
+}
+
+.notOk {
+    color: red;
+}
