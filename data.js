@@ -210,4 +210,410 @@ angular.module('eng.main')
         ]
       }
     ]
+  })
+  .constant('translations', {
+    tr1: [
+      {
+        question: 'Где твои очки?',
+        answer: 'Where are your glasses?'
+      },
+      {
+        question: 'Это очень трудная контрольная работа.',
+        answer: 'It\'s a very difficult test.'
+      },
+      {
+        question: 'Это его проблема.',
+        answer: 'It\'s his problem.'
+      },
+      {
+        question: 'Где ваши студенты?',
+        answer: 'Where are your students?'
+      },
+      {
+        question: 'Скажите это по буквам.',
+        answer: 'Spell it'
+      },
+      {
+        question: 'Оставьте это здесь.',
+        answer: 'Leave it here'
+      },
+      {
+        question: 'Позвоните ей.',
+        answer: 'Call her.'
+      },
+      {
+        question: 'Пожалуйста, подождите меня.',
+        answer: 'Please wait for me.'
+      },
+      {
+        question: 'Эти слова трудные?',
+        answer: 'Are these words difficult?'
+      },
+      {
+        question: 'Сегодня тепло.',
+        answer: 'It\'s warm today.'
+      },
+      {
+        question: 'Это трудно или легко?',
+        answer: 'Is it difficult or easy?'
+      },
+      {
+        question: 'Это моя проблема.',
+        answer: 'It\'s my problem.'
+      },
+      {
+        question: 'Это его пальто?',
+        answer: 'Is it his coat?'
+      },
+      {
+        question: 'Чьи это адреса?',
+        answer: 'Whose are these addresses?'
+      },
+      {
+        question: 'Он болен?',
+        answer: 'Is he ill?'
+      },
+      {
+        question: 'Не ждите их.',
+        answer: 'Don\'t wait for them.'
+      },
+      {
+        question: 'Сегодня солнечно.',
+        answer: 'It\'s sunny today.'
+      },
+      {
+        question: 'Позвони мне сегодня.',
+        answer: 'Call me today.'
+      },
+      {
+        question: 'Он болен и лежит в постели.',
+        answer: 'He is ill and he is in bed.'
+      },
+      {
+        question: 'Ты готов к экзамену?',
+        answer: 'Are you ready for the exam?'
+      },
+      {
+        question: 'Твой адрес легкий.',
+        answer: 'Your address is easy.'
+      },
+      {
+        question: 'Она замужем?',
+        answer: 'Is she married?'
+      },
+      {
+        question: 'Ваш экзамен трудный.',
+        answer: 'Your exam is difficult.'
+      },
+      {
+        question: 'Позвоните его маме, пожалуйста.',
+        answer: 'Call his mother please.'
+      },
+      {
+        question: 'Где мой галстук?',
+        answer: 'Where is my tie?'
+      },
+      {
+        question: 'Встретьте его.',
+        answer: 'Meet him.'
+      },
+      {
+        question: 'Найдите его пальто.',
+        answer: 'Find his coat.'
+      },
+      {
+        question: 'Найдите их адрес или позвоните им.',
+        answer: 'Find their addresses or call them?'
+      },
+      {
+        question: 'Здесь очень жарко.',
+        answer: 'It\'s very hot here.'
+      },
+      {
+        question: 'Сегодня ветрено.',
+        answer: 'It\'s windy today'
+      },
+      {
+        question: 'Подожди его.',
+        answer: 'Wait for him.'
+      },
+      {
+        question: 'Не опаздывайте на экзамен.',
+        answer: 'Don\'t late for the exam.'
+      },
+      {
+        question: 'Она учится в университете.',
+        answer: 'She is at University.'
+      },
+      {
+        question: 'Сегодня туман.',
+        answer: 'It\'s foggy today.'
+      },
+      {
+        question: 'Это их машины?',
+        answer: 'Are their cars?'
+      },
+      {
+        question: 'Она лежит в постели?',
+        answer: 'Is she in bed?'
+      },
+      {
+        question: 'Позвони тому студенту.',
+        answer: 'Call that student.'
+      },
+      {
+        question: 'Он не женат.',
+        answer: 'He isn\'t married.'
+      },
+      {
+        question: 'Сегодня не жарко.',
+        answer: 'It isn\'t hot today.'
+      },
+      {
+        question: 'Пошлите ему два галстука.',
+        answer: 'Send him two ties.'
+      },
+      {
+        question: 'Это нелегко.',
+        answer: 'This isn\'t easy.'
+      },
+      {
+        question: 'Оставьте карту здесь.',
+        answer: 'Leave the map here.'
+      },
+      {
+        question: 'Расскажи мне об этом.',
+        answer: 'Tell me about them.'
+      },
+      {
+        question: 'Это легкая контрольная?',
+        answer: 'Is it easy test?'//?
+      },
+      {
+        question: 'Ветра нет. Солнечно.',
+        answer: 'It\'s not windy. Sunny.'
+      },
+      {
+        question: 'Открой книгу.',
+        answer: 'Open the book.'
+      },
+      {
+        question: 'Познакомьтесь с моим братом. Его зовут Боб.',
+        answer: 'Meet my brother. His name is Bob.'
+      },
+      {
+        question: 'Сегодня солнечно и не холодно.',
+        answer: 'It\'s sunny and not cold today.'
+      },
+      {
+        question: 'Не посылайте ему книги.',
+        answer: 'Don\'t send him books.'
+      },
+      {
+        question: 'Произнесите ваше имя по буквам.',
+        answer: 'Spell your name.'
+      }
+    ],
+    tr2: [
+      {
+        question: 'Вы готовы к контрольной работе?',
+        answer: 'Are you ready for the test?'
+      },
+      {
+        question: 'Познакомьтесь с нашим врачом.',
+        answer: 'Meet our doctor.'
+      },
+      {
+        question: 'Книга очень легкая.',
+        answer: 'Book is very easy.'
+      },
+      {
+        question: 'Где мой галстук?',
+        answer: 'Where is my tie?'
+      },
+      {
+        question: 'Произнесите их имена по буквам.',
+        answer: 'Spell their names.'
+      },
+      {
+        question: 'Их контрольные не плохи.',
+        answer: 'Their tests are not bad.'
+      },
+      {
+        question: 'Тест очень легкий.',
+        answer: 'Test is very easy.'
+      },
+      {
+        question: 'Подождите нас в машине.',
+        answer: 'Wait for us in the car.'
+      },
+      {
+        question: 'Где.этот человек? Найдите его.',
+        answer: 'Where is this man? Find him.'
+      },
+      {
+        question: 'Мы учимся в университете.',
+        answer: 'We are at University.'
+      },
+      {
+        question: 'Им тоже жарко?',
+        answer: 'Are they hot too?'
+      },
+      {
+        question: 'Не оставляйте здесь эти очки.',
+        answer: 'Don\'t leave these glasses here.'
+      },
+      {
+        question: 'Позвоните им и расскажите об этом.',
+        answer: 'Call them and tell them about it.'
+      },
+      {
+        question: 'Мы не готовы к этим экзаменам.',
+        answer: 'We are not ready for these exams.'
+      },
+      {
+        question: 'Подождите меня здесь.',
+        answer: 'Wait for me here.'
+      },
+      {
+        question: 'Это ваша проблема.',
+        answer: 'This is your problem'
+      },
+      {
+        question: 'Найдите эту карту и пришлите ее мне.',
+        answer: 'Find this map and send it to me.'
+      },
+      {
+        question: 'Сегодня холодно и солнечно.',
+        answer: 'It\'s cold and sunny today.'
+      },
+      {
+        question: 'Ее контрольная работа очень трудна.',
+        answer: 'Her test is very difficult.'
+      },
+      {
+        question: 'Его пальто большое.',
+        answer: 'His coat is big.'
+      },
+      {
+        question: 'У него легкий адрес. Найдите его.',
+        answer: 'His address is very easy. Find it.'
+      },
+      {
+        question: 'Оставьте пальто здесь.',
+        answer: 'Leave the coat here.'
+      },
+      {
+        question: 'Джо и Питер тоже учатся в университете?',
+        answer: 'Are Joe and Peter at University too?'
+      },
+      {
+        question: 'Почему вы опаздываете?',
+        answer: 'Why are you late?'
+      },
+      {
+        question: 'Где его квартира?',
+        answer: 'Where his house?'
+      },
+      {
+        question: 'Она сегодня болеет. Позвони ей.',
+        answer: 'She is ill today. Call her.'
+      },
+      {
+        question: 'Откройте эту книгу. Она об Англии.',
+        answer: 'Open this book. It\'s about England.'
+      },
+      {
+        question: 'Пришлите им эти тесты сегодня.',
+        answer: 'Send them these tests today.'
+      },
+      {
+        question: 'Готовься к экзаменам. Они трудные.',
+        answer: 'Be ready for the exams. They are difficult.'
+      },
+      {
+        question: 'Произнесите слово по буквам.',
+        answer: 'Spell the word.'
+      },
+      {
+        question: 'Вы сегодня рано.',
+        answer: 'You are early today.'
+      },
+      {
+        question: '— Где его машина? — Она там.',
+        answer: '- Where is his car? - It\'s there.'
+      },
+      {
+        question: 'Врач здесь.',
+        answer: 'The doctor is here.'
+      },
+      {
+        question: 'Найдите врача. Он болен.',
+        answer: 'Find the doctor. He is ill.'
+      },
+      {
+        question: 'Встретьте ее сегодня.',
+        answer: 'Meet her today.'
+      },
+      {
+        question: 'Не ждите этого врача здесь.',
+        answer: 'Don\'t wait this doctor here.'
+      },
+      {
+        question: 'Мне холодно. Где мое пальто?',
+        answer: 'I\'m cold. Where is my coat.'
+      },
+      {
+        question: 'Откройте вашу квартиру. Ключ здесь.',
+        answer: 'Open your flat. The key are here.'
+      },
+      {
+        question: 'Та квартира плохая. Найдите хорошую квартиру.',
+        answer: 'That flat is bad. Find a good flat.'
+      },
+      {
+        question: 'Как их зовут?',
+        answer: 'What are their names?'
+      },
+      {
+        question: 'Этих студентов здесь нет. Найдите их.',
+        answer: 'Those students are not here. Find them.'
+      },
+      {
+        question: 'Не опаздывайте сегодня.',
+        answer: 'Don\'t be late today.'
+      },
+      {
+        question: 'Сколько им лет?',
+        answer: 'How old are they?'
+      },
+      {
+        question: 'Она не замужем.',
+        answer: 'SHe is not married.'
+      },
+      {
+        question: 'Этот экзамен трудный, а тот экзамен — легкий.',
+        answer: 'This exam is difficult, but that exam is easy.'
+      },
+      {
+        question: 'Почему вы здесь?',
+        answer: 'Why are you here?'
+      },
+      {
+        question: 'Найдите этого преподавателя. Он хороший преподаватель.',
+        answer: 'Find this teacher. He is a good teacher.'
+      },
+      {
+        question: '— Где мои ключи? — Они в машине.',
+        answer: '- Where are my keys? They are in the car.'
+      },
+      {
+        question: 'Позвони мне и жди меня здесь.',
+        answer: 'Call me and wait for me here.'
+      },
+      {
+        question: 'Мы из Лондона. Там туман.',
+        answer: 'We are from London. It\'s foggy there.'
+      }
+    ]
   });

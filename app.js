@@ -110,27 +110,44 @@ angular.module('eng.main')
         }
       };
     }])
-  .directive("quizWithOptions", ['$compile', function ($compile) {
-    return {
-      restrict: 'AE',
-      link: function (scope, element) {
-        scope.foo = 'bar';
-        scope.fff = function () {
-          console.log('!!!');
-        };
-        //console.log(element[0].children);
-        for (var i = 0; i < element[0].children.length; i++) {
-          console.log(element[0].children[i].innerHTML, element[0].children[i].attributes);
+  .directive('sentencesTranslations', ['$compile', 'translations',
+    function ($compile, translations) {
+      return {
+        restrict: 'AE',
+        scope: true,
+        link: function (scope, element, attr) {
+          if (!attr.set || !translations[attr.set]) {
+            console.log('Wrong set: ' + attr.set);
+            return;
+          }
+
+          scope.expectedSet = translations[attr.set];
+
+          var content = '';
+
+          for (var i = 0; i < scope.expectedSet.length; i++) {
+            var item = scope.expectedSet[i];
+            item.option = '';
+
+            content += '<md-input-container>' +
+            '<label>' + item.question + '</label>' +
+            '<input ng-model="expectedSet[' + i + '].option">' +
+            '' +
+            '<div ng-messages ng-if="expectedSet[' + i + '].option !== expectedSet[' + i + '].answer">' +
+            '<div ng-message="required">Not answered.</div>' +
+            '</div>' +
+            '</md-input-container>';
+          }
+
+          element.empty();
+          element.append($compile(content)(scope));
         }
-        element.html($compile("<a href ng-click='fff()'>{{foo}}</a>")(scope));
-      }
-    };
-  }])
-  .controller('GeneralCtrl', ['drills',
-    function (drills) {
+      };
+    }])
+  .controller('GeneralCtrl', [
+    function () {
       var self = this;
       self.tabs = {
         selectedIndex: 0
       };
-      self.data = drills;
     }]);
